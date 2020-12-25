@@ -1,0 +1,12 @@
+a {
+	text-decoration: none;
+	color: #000000 ;
+	background: none;
+}
+a:visited {
+	color: #E8F715;
+}
+a:active {
+	color: #B9292C;
+
+

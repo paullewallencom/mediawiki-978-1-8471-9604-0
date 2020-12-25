@@ -1,0 +1,11 @@
+td.top {
+ background-color: #04B404; color: white;
+ margin-top: 4px; margin-bottom: 4px;
+ padding-top: 0; padding-bottom: 0;
+ text-transform: uppercase;
+ font-family: Verdana, Arial, sans-serif; font-size: 8pt;
+}
+td.top a {
+ font-family: Verdana, Arial, sans-serif;
+ background-color: #04B404; color: white;
+ text-decoration: none; font-size: 10pt;

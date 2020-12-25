@@ -1,0 +1,47 @@
+CREATE TABLE flossWikidiscussion(
+		discussion_id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(discussion_id),
+		page_id INT NOT NULL,
+		id TINYTEXT NOT NULL,
+
+		view_group VARCHAR(16),
+		post_group VARCHAR(16),
+		restricted_post_group VARCHAR(16),
+		moderator_group VARCHAR(16),
+
+		max_depth INT,
+
+		counted_depth INT,
+		page_size TINYTEXT,
+		show_all_page_size INT,
+		expanded_depth INT,
+		show_all_order INT,
+		init_display TINYTEXT,
+		time_format INT,
+
+		characters_max INT,
+		author_characters_max INT,
+		quoting INT,
+		preview INT,
+
+		comment_num1 INT DEFAULT 0,
+		comment_num2 INT DEFAULT 0
+	);
+
+	CREATE TABLE flossWikidiscussion_comments(
+		comment_id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(comment_id),
+		discussion_id INT NOT NULL,
+
+		user_id INT,
+		author_name TINYTEXT,
+		text TEXT,
+		time INT,
+
+		status INT,
+		author_status INT,
+		parent_id INT,
+		depth INT,
+		vote INT
+	);
+
+	CREATE INDEX IDX_discussion_page_id ON flossWikidiscussion (page_id);
+	CREATE INDEX IDX_discussion_comments_discussion_id ON flossWikidiscussion_comments (discussion_id);

@@ -1,0 +1,6 @@
+require_once("$IP/extensions/MoodleGlossary.php");
+$wgMoodleTablePrefix='mdl_'; //Your Moodle table prefix.
+$wgMoodleDBServer='localhost'; //YOUR_DB_SERVER
+$wgMoodleDBName='YOUR_MOODLE_DATABASE_NAME';
+$wgMoodleDBUser='YOUR_DB_USER_NAME';
+$wgMoodleDBPassword='YOUR_DB_PASSWORD';
